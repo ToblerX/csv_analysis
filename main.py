@@ -56,29 +56,23 @@ def main():
     top_5_products = data['Product'].value_counts().head(5)
 
     # Bar graph of top 5 products
+    top_5_products = data['Product'].value_counts().head(5)
+
     plt.figure(figsize=(10, 6))
-    plt.bar(top_5_products.index, top_5_products.values, color='chocolate', edgecolor='black', alpha=0.9)
 
+    plt.bar(top_5_products.index, top_5_products.values, color='chocolate', edgecolor='black', alpha=0.75)
     plt.xlabel('Product')
-    plt.ylabel('Number of Sales')
-    plt.title('Top 5 Best-Selling Chocolate Brands')
-    plt.xticks(rotation=45)  # Rotate labels for better visibility
-    plt.grid(axis='y', linestyle='dashed', alpha=0.7)
-
+    plt.ylabel('Amount')
+    plt.xticks(rotation=45)
     plt.show()
 
     # Line graph of monthly sales trends
     plt.figure(figsize=(10, 6))
-    plt.plot(monthly_profit.index.astype(str), monthly_profit.values, marker='o', linestyle='-', color='b',
-             label="Total Sales")
-
+    plt.plot(monthly_profit.index.astype(str), monthly_profit.values, color='gold', alpha=0.75, marker='o')
     plt.xlabel('Month')
-    plt.ylabel('Total Sales Amount')
-    plt.title('Monthly Sales Trends')
-    plt.xticks(rotation=45)  # Rotate labels for better readability
-    plt.legend()
-    plt.grid(axis='y', linestyle='dashed', alpha=0.7)
-
+    plt.ylabel('Total Profit')
+    plt.xticks(rotation=45)
+    plt.grid(axis='y', linestyle='dashed', linewidth=0.5)
     plt.show()
 
 
