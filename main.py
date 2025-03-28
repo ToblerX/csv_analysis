@@ -45,11 +45,11 @@ def main():
 
     # Plot histogram of sales (Amount distribution)
     plt.figure(figsize=(10, 6))
-    plt.hist(data['Amount'].dropna(), bins=20, edgecolor='black', alpha=0.7)
-    plt.xlabel('Sales Amount')
-    plt.ylabel('Frequency')
-    plt.title('Sales Distribution')
-    plt.grid(axis='y', linestyle='dashed', alpha=0.7)
+    plt.hist(data['SalesPerson'], bins=25, edgecolor='black', alpha=0.75)
+    plt.xlabel('Sales Person')
+    plt.ylabel('Amount')
+    plt.xticks(rotation=45)
+    plt.title('Histogram of Amount')
     plt.show()
 
     # Get the top 5 chocolate brands and their sales counts
