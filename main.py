@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 def main():
     # Load data
-    data = pd.read_csv("Y:\\PycharmProjects\\csv_analysis\\data\\Chocolate Sales.csv")
+    data = pd.read_csv('./data/Chocolate Sales.csv')
 
     # Drop rows with any NaN values
     data.dropna(inplace=True)
